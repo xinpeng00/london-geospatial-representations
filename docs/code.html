@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Notebook index for the London geospatial representations project."><title>Code · London Geospatial Representations</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<header class="site-header"><nav class="nav" aria-label="Primary navigation"><a class="brand" href="index.html">London Geospatial Representations <small>GEOG0105</small></a><div class="nav-links"><a href="index.html">Overview</a><a href="methods.html">Methods</a><a href="results.html">Results</a><a aria-current="page" href="code.html">Code</a><a href="data.html">Data</a></div></nav></header>
+<section class="page-head"><div><div class="eyebrow">Code</div><h1>A linear, auditable notebook sequence</h1><p>Public notebooks retain code and Markdown but omit execution outputs. The private frozen archive retains the executed analytical record.</p></div></section>
+<main>
+  <section><div class="kicker">Final pipeline</div><h2>Analysis and reporting notebooks</h2><div class="table-wrap"><table><thead><tr><th>Step</th><th>Notebook</th><th>Role</th></tr></thead><tbody>
+    <tr><td>01</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/01_data_audit_and_sample_construction.ipynb">Data audit and sample construction</a></td><td>Correct and freeze the task samples.</td></tr>
+    <tr><td>02</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/02_alphaearth_missing_audit.ipynb">AlphaEarth missingness audit</a></td><td>Resolve boundary/sliver intersections.</td></tr>
+    <tr><td>03</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/03_common_sample_and_representation_audit.ipynb">Common sample audit</a></td><td>Freeze the 26,597-row common sample.</td></tr>
+    <tr><td>04</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/04_data_provenance_and_temporal_audit.ipynb">Provenance and temporal audit</a></td><td>Verify dates, support and modality provenance.</td></tr>
+    <tr><td>05</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/05_unified_final_feature_table.ipynb">Unified feature table</a></td><td>Build the leakage-safe modelling table.</td></tr>
+    <tr><td>06</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/06_final_ridge_representation_benchmark.ipynb">Ridge benchmark</a></td><td>Primary nested borough-held-out comparison.</td></tr>
+    <tr><td>07</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/07_controls_incremental_value_and_control_ablation.ipynb">Incremental value and ablation</a></td><td>Paired gains beyond matched controls.</td></tr>
+    <tr><td>08</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/08_random_vs_spatial_cv_sensitivity.ipynb">Random vs spatial CV</a></td><td>Measure sensitivity to validation geography.</td></tr>
+    <tr><td>09</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/09_targeted_dinov2_satclip_combination.ipynb">DINOv2 + SatCLIP</a></td><td>Targeted redundancy test.</td></tr>
+    <tr><td>10</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/10_pca64_representation_dimension_sensitivity.ipynb">PCA64 sensitivity</a></td><td>Fold-local dimension control.</td></tr>
+    <tr><td>11</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/11_geometric_spatial_blocks_and_residual_diagnostics.ipynb">Geometric CV and residuals</a></td><td>Continuous regions and Moran's I.</td></tr>
+    <tr><td>12</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/12_selected_xgboost_nonlinearity_robustness.ipynb">XGBoost robustness</a></td><td>Selected nonlinear comparisons.</td></tr>
+    <tr><td>13</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/13_gatv2_neighbourhood_robustness.ipynb">GATv2 robustness</a></td><td>Neighbourhood graph vs matched MLP.</td></tr>
+    <tr><td>14</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/14_epc_reliability_and_record_timing_sensitivity.ipynb">EPC reliability</a></td><td>Target definition and timing checks.</td></tr>
+    <tr><td>15</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/15_success_failure_case_diagnostics.ipynb">Case diagnostics</a></td><td>Held-out success and failure analysis.</td></tr>
+    <tr><td>16</td><td><a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/notebooks/16_dissertation_figures_tables_FINAL.ipynb">Figures and tables</a></td><td>Reporting from frozen outputs.</td></tr>
+  </tbody></table></div></section>
+
+  <section><div class="kicker">Upstream preparation</div><h2>Representation inputs</h2><div class="grid-2">
+    <article class="card"><h3>00a · Source, SatCLIP, TESSERA and aerial preparation</h3><p>Prepare the core source tables and frozen location/EO inputs.</p></article>
+    <article class="card"><h3>00b · DINOv2 extraction</h3><p>Extract aerial-image representations at task-specific support.</p></article>
+    <article class="card"><h3>00c · Street View CLIP extraction</h3><p>Aggregate street-level content and availability metadata.</p></article>
+    <article class="card"><h3>00d · AlphaEarth preparation</h3><p>Prepare the supplied annual embedding summaries.</p></article>
+  </div></section>
+
+  <section><div class="callout"><strong>Reproduction boundary:</strong> the code is public, but exact execution requires authorised access to source data and imagery. Paths are centralised in <a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/src/config.py"><code>src/config.py</code></a>.</div></section>
+</main><footer><div class="footer-inner"><span>© 2026 Xinpeng Huang · UCL GEOG0105</span><span><a href="https://github.com/xinpeng00/london-geospatial-representations/tree/main/notebooks">Open notebooks on GitHub</a></span></div></footer></body></html>
+

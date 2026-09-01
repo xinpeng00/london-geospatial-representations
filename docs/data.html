@@ -1,0 +1,26 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Data availability and licensing for the London geospatial representations project."><title>Data · London Geospatial Representations</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<header class="site-header"><nav class="nav" aria-label="Primary navigation"><a class="brand" href="index.html">London Geospatial Representations <small>GEOG0105</small></a><div class="nav-links"><a href="index.html">Overview</a><a href="methods.html">Methods</a><a href="results.html">Results</a><a href="code.html">Code</a><a aria-current="page" href="data.html">Data</a></div></nav></header>
+<section class="page-head"><div><div class="eyebrow">Data</div><h1>Transparent provenance without redistributing restricted assets</h1><p>The repository separates reproducible analysis logic from large, licensed or privately supplied source material.</p></div></section>
+<main>
+  <section><div class="kicker">Included</div><h2>Public research objects</h2><div class="grid-3">
+    <article class="card"><h3>Code</h3><p>Twenty output-stripped notebooks and shared configuration.</p></article>
+    <article class="card"><h3>Summaries</h3><p>Compact CSV tables covering the primary benchmark and selected sensitivity analyses.</p></article>
+    <article class="card"><h3>Documentation</h3><p>Task definitions, provenance, validation scope and reconstruction requirements.</p></article>
+  </div></section>
+
+  <section><div class="kicker">Excluded</div><h2>Private or restricted assets</h2><div class="table-wrap"><table><thead><tr><th>Asset</th><th>Reason for exclusion</th></tr></thead><tbody>
+    <tr><td>25 cm Digimap aerial imagery and crops</td><td>Institutional licensing restrictions.</td></tr>
+    <tr><td>Greater London Street View archive</td><td>Third-party source and image redistribution restrictions.</td></tr>
+    <tr><td>Full EPC export</td><td>Large raw source; reproducible from the official service subject to its terms.</td></tr>
+    <tr><td>Full embedding tables</td><td>Large derived assets tied to the restricted source pipeline.</td></tr>
+    <tr><td>Model table and prediction parquet files</td><td>Not required for code inspection; retained in the frozen private archive.</td></tr>
+    <tr><td>Temporary checkpoints and caches</td><td>Intermediate computation rather than canonical research outputs.</td></tr>
+  </tbody></table></div></section>
+
+  <section><div class="kicker">Interpretive boundaries</div><h2>What the targets represent</h2><div class="grid-2">
+    <article class="card"><h3>PTAL</h3><p>TfL's Access Index represents public-transport service access. It does not directly measure destinations, travel behaviour or experienced mobility.</p></article>
+    <article class="card"><h3>EPC</h3><p>The current-energy-efficiency score is a modelled asset rating aggregated by postcode. It is not observed household energy use.</p></article>
+  </div></section>
+
+  <section><div class="callout">For the detailed reconstruction notes and source boundaries, read <a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/data/README.md"><code>data/README.md</code></a> and <a href="https://github.com/xinpeng00/london-geospatial-representations/blob/main/NOTICE.md"><code>NOTICE.md</code></a>.</div></section>
+</main><footer><div class="footer-inner"><span>© 2026 Xinpeng Huang · UCL GEOG0105</span><span><a href="https://github.com/xinpeng00/london-geospatial-representations">Repository</a></span></div></footer></body></html>

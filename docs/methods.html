@@ -1,0 +1,27 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Methods for the London geospatial representations dissertation."><title>Methods · London Geospatial Representations</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<header class="site-header"><nav class="nav" aria-label="Primary navigation"><a class="brand" href="index.html">London Geospatial Representations <small>GEOG0105</small></a><div class="nav-links"><a href="index.html">Overview</a><a aria-current="page" href="methods.html">Methods</a><a href="results.html">Results</a><a href="code.html">Code</a><a href="data.html">Data</a></div></nav></header>
+<section class="page-head"><div><div class="eyebrow">Methods</div><h1>A leakage-aware spatial evaluation pipeline</h1><p>The same modelling framework is applied to both tasks, with task-specific controls, imagery support and spatial validation.</p></div></section>
+<main>
+  <section><div class="pipeline">
+    <article class="card"><h3>Samples</h3><p>Construct corrected PTAL and EPC samples, then freeze a common 26,597-row representation-complete table.</p></article>
+    <article class="card"><h3>Representations</h3><p>Join five frozen representation families and explicit coverage metadata.</p></article>
+    <article class="card"><h3>Models</h3><p>Fit Ridge linear probes using fold-local preprocessing and inner hyperparameter selection.</p></article>
+    <article class="card"><h3>Evaluation</h3><p>Compare controls, single modalities, fusion and robustness branches under spatial splits.</p></article>
+  </div></section>
+
+  <section><div class="kicker">Representation inventory</div><h2>Five views of urban context</h2><div class="grid-3">
+    <article class="card"><h3>DINOv2 · 768D</h3><p>Visual representation extracted from task-specific 25 cm aerial-image crops.</p><div class="chips"><span class="chip">Aerial</span><span class="chip">Local morphology</span></div></article>
+    <article class="card"><h3>Street View CLIP · 512D</h3><p>Aggregated street-level visual content, accompanied by image availability and coverage metadata.</p><div class="chips"><span class="chip">Street-level</span><span class="chip">Human-scale context</span></div></article>
+    <article class="card"><h3>SatCLIP · 256D</h3><p>Coordinate-conditioned location representation; it is not a raw satellite-image embedding.</p><div class="chips"><span class="chip">Location</span></div></article>
+    <article class="card"><h3>TESSERA · 128D</h3><p>Frozen 2024 Earth-observation time-series representation.</p><div class="chips"><span class="chip amber">EO time series</span></div></article>
+    <article class="card"><h3>AlphaEarth · 64D</h3><p>Annual satellite/environment embedding represented by supplied polygon-level means.</p><div class="chips"><span class="chip amber">Annual EO</span></div></article>
+  </div></section>
+
+  <section><div class="kicker">Validation</div><h2>Spatial separation is part of the estimand</h2><div class="grid-2">
+    <article class="card"><h3>Primary protocol</h3><p>Five outer folds hold out 33 borough-level groups. Three group-aware inner folds tune Ridge regularisation. Scaling, encoding, imputation and dimensionality reduction are learned within training folds.</p></article>
+    <article class="card"><h3>Sensitivity protocols</h3><p>Random five-fold validation tests inflation from local similarity. Five continuous geographic regions provide a stricter spatial-transfer stress test. Further branches cover PCA64, XGBoost, matched MLP/GATv2 and EPC reliability.</p></article>
+  </div><div class="callout"><strong>Scope:</strong> borough-held-out and continuous-region results measure transfer within London. They are not external-city generalisation tests.</div></section>
+
+  <section><div class="kicker">Metrics</div><h2>Performance and spatial residual structure</h2><p class="lede">Outer-fold R², RMSE and MAE measure predictive performance. Paired fold differences quantify incremental value beyond matched controls. Out-of-fold residual Moran's I assesses remaining spatial structure.</p></section>
+</main><footer><div class="footer-inner"><span>© 2026 Xinpeng Huang · UCL GEOG0105</span><span><a href="code.html">Browse the analysis sequence</a></span></div></footer></body></html>
+

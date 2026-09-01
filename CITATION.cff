@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the dissertation project."
+title: "Evaluating Multimodal Geospatial Representations for Spatially Generalisable Urban Prediction in London"
+type: software
+authors:
+  - family-names: Huang
+    given-names: Xinpeng
+year: 2026
+repository-code: "https://github.com/xinpeng00/london-geospatial-representations"
+url: "https://xinpeng00.github.io/london-geospatial-representations/"
+license: MIT
+keywords:
+  - geospatial representation learning
+  - spatial cross-validation
+  - urban prediction
+  - London
+  - PTAL
+  - EPC
+

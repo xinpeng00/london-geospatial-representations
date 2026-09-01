@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UCL MSc dissertation on multimodal geospatial representations for spatially generalisable urban prediction in London.">
+  <title>London Geospatial Representations</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header"><nav class="nav" aria-label="Primary navigation">
+    <a class="brand" href="index.html">London Geospatial Representations <small>GEOG0105</small></a>
+    <div class="nav-links"><a aria-current="page" href="index.html">Overview</a><a href="methods.html">Methods</a><a href="results.html">Results</a><a href="code.html">Code</a><a href="data.html">Data</a></div>
+  </nav></header>
+
+  <section class="hero"><div class="hero-inner">
+    <div class="eyebrow">UCL MSc Dissertation · Greater London</div>
+    <h1>Can pretrained geospatial representations transfer across urban space?</h1>
+    <p>Five frozen aerial, street-level, Earth-observation and location representations are evaluated on public-transport accessibility and building-energy prediction using spatially explicit validation.</p>
+    <div class="hero-actions"><a class="button button-primary" href="results.html">Explore the findings</a><a class="button button-secondary" href="https://github.com/xinpeng00/london-geospatial-representations">View repository</a></div>
+  </div></section>
+
+  <div class="stat-strip" aria-label="Project statistics">
+    <div class="stat"><strong>26,597</strong><span>common study locations</span></div>
+    <div class="stat"><strong>5</strong><span>representation families</span></div>
+    <div class="stat"><strong>2</strong><span>urban prediction tasks</span></div>
+    <div class="stat"><strong>5 × 3</strong><span>outer × inner spatial CV</span></div>
+  </div>
+
+  <main>
+    <section><div class="kicker">Research design</div><h2>Two tasks, one comparative framework</h2><p class="lede">The analysis asks when frozen geospatial representations add predictive information, whether modalities are complementary or redundant, and how conclusions change under spatially realistic validation.</p>
+      <div class="grid-2">
+        <article class="card task-card"><h3>PTAL accessibility</h3><div class="metric">6,597 <small>sampled grid locations</small></div><p>Prediction of the 2023 TfL Access Index. Imagery and Street View context use a 300 m spatial support.</p></article>
+        <article class="card task-card epc"><h3>EPC energy efficiency</h3><div class="metric">20,000 <small>sampled postcodes</small></div><p>Prediction of postcode-mean current-energy-efficiency scores. Image context uses a 150 m spatial support.</p></article>
+      </div>
+    </section>
+
+    <section><div class="kicker">Primary PTAL benchmark</div><h2>Multimodal fusion produced the strongest held-out performance</h2>
+      <div class="chart" role="img" aria-label="Mean borough-held-out R squared for selected PTAL models">
+        <div class="bar-row fusion" style="--value:.693"><div class="bar-label">Full representations</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.693</div></div>
+        <div class="bar-row fusion" style="--value:.673"><div class="bar-label">Street + aerial</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.673</div></div>
+        <div class="bar-row" style="--value:.661"><div class="bar-label">Street + metadata</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.661</div></div>
+        <div class="bar-row" style="--value:.615"><div class="bar-label">AlphaEarth</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.615</div></div>
+        <div class="bar-row" style="--value:.613"><div class="bar-label">Street View CLIP</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.613</div></div>
+        <div class="bar-row" style="--value:.595"><div class="bar-label">DINOv2 aerial</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.595</div></div>
+        <div class="bar-row control" style="--value:.401"><div class="bar-label">Spatial controls</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.401</div></div>
+        <p class="chart-note">Mean outer-fold R² under nested borough-held-out cross-validation. Values are rounded from the frozen final results.</p>
+      </div>
+    </section>
+
+    <section><div class="kicker">Interpretation</div><h2>Predictive value was task-dependent</h2>
+      <div class="grid-3">
+        <article class="card"><h3>Urban form was observable</h3><p>PTAL was strongly associated with information encoded in street scenes, aerial imagery and annual Earth-observation context.</p></article>
+        <article class="card"><h3>Fusion was selective</h3><p>Street-level and aerial information were complementary for PTAL, while DINOv2 and SatCLIP showed little additional benefit when combined.</p></article>
+        <article class="card"><h3>Controls mattered for EPC</h3><p>Construction age and floor area dominated EPC prediction. Representation fusion added little once these extensive property controls were available.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="footer-inner"><span>© 2026 Xinpeng Huang · UCL GEOG0105</span><span><a href="https://github.com/xinpeng00/london-geospatial-representations">Source code</a></span></div></footer>
+</body>
+</html>
+
