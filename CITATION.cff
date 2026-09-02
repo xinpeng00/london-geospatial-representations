@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code, please cite the dissertation project."
-title: "Evaluating Multimodal Geospatial Representations for Spatially Generalisable Urban Prediction in London"
+title: "Evaluating Multimodal Geospatial Representations for Spatially Generalisable Urban Prediction in London: Evidence from PTAL and EPC"
 type: software
 authors:
   - family-names: Huang
@@ -16,4 +16,3 @@ keywords:
   - London
   - PTAL
   - EPC
-
