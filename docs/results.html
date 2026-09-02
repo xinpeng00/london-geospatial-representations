@@ -5,20 +5,20 @@
   <section><div class="kicker">PTAL</div><h2>Strong single representations, stronger fusion</h2><div class="grid-3">
     <article class="card"><div class="metric">.401 <small>R²</small></div><h3>Spatial controls</h3><p>Baseline using coordinates and spatial terms.</p></article>
     <article class="card"><div class="metric">.661 <small>R²</small></div><h3>Street + availability</h3><p>Street View CLIP with image coverage metadata.</p></article>
-    <article class="card"><div class="metric">.693 <small>R²</small></div><h3>Full representation set</h3><p>Strongest mean borough-held-out result.</p></article>
+    <article class="card"><div class="metric">.693 <small>R²</small></div><h3>All representations + Street View metadata</h3><p>Strongest mean borough-held-out result.</p></article>
   </div><p class="lede">AlphaEarth (0.615), Street View CLIP (0.613), and DINOv2 (0.595) each substantially outperformed the spatial baseline. Street and aerial information were complementary; DINOv2 and SatCLIP were largely redundant in the targeted combination test.</p></section>
 
   <section><div class="kicker">EPC</div><h2>Property controls changed the conclusion</h2><div class="grid-3">
-    <article class="card"><div class="metric">.161 <small>R²</small></div><h3>Sparse controls</h3><p>Spatial variables plus property type and built form.</p></article>
-    <article class="card"><div class="metric">.583 <small>R²</small></div><h3>Extensive controls</h3><p>Addition of floor area and construction age.</p></article>
-    <article class="card"><div class="metric">.589 <small>R²</small></div><h3>Controls + TESSERA</h3><p>A small positive increment beyond extensive controls.</p></article>
-  </div><p class="lede">Representation-only performance was led by DINOv2 (0.334), but remained well below the extensive control model. Broad multimodal fusion did not improve on that stronger baseline.</p></section>
+    <article class="card"><div class="metric">.161 <small>R²</small></div><h3>Compact controls</h3><p>Six spatial controls plus property type and built form.</p></article>
+    <article class="card"><div class="metric">.583 <small>R²</small></div><h3>Rich controls</h3><p>Compact controls plus median floor area and construction-age band.</p></article>
+    <article class="card"><div class="metric">.589 <small>R²</small></div><h3>Rich controls + TESSERA</h3><p>A small positive increment beyond rich controls.</p></article>
+  </div><p class="lede">Representation-only performance was led by DINOv2 (0.334), but remained well below the rich-control model. Broad multimodal fusion did not improve on that stronger baseline. The compact-to-rich gain was driven primarily by construction-age information, while median floor area added very little.</p></section>
 
   <section><div class="kicker">Spatial sensitivity</div><h2>Stricter geography exposed different levels of transfer</h2><div class="table-wrap"><table><thead><tr><th>PTAL model</th><th>Random CV</th><th>Borough-held-out</th><th>Continuous regions</th></tr></thead><tbody>
     <tr><td>Spatial controls</td><td>0.430</td><td>0.401</td><td>−0.129</td></tr>
-    <tr><td>Full representations + controls</td><td>0.724</td><td>0.693</td><td>0.547</td></tr>
-    <tr><td>DINOv2 + controls</td><td>0.642</td><td>0.608</td><td>0.450</td></tr>
-    <tr><td>Street View + metadata + controls</td><td>0.688</td><td>0.663</td><td>0.540</td></tr>
+    <tr><td>Spatial controls + all representations + Street View metadata</td><td>0.724</td><td>0.693</td><td>0.547</td></tr>
+    <tr><td>Spatial controls + DINOv2</td><td>0.642</td><td>0.608</td><td>0.450</td></tr>
+    <tr><td>Spatial controls + Street View + metadata</td><td>0.688</td><td>0.663</td><td>0.540</td></tr>
   </tbody></table></div><p class="chart-note">Mean outer-fold R². Continuous regions are unbuffered geographic partitions and vary in target distribution.</p></section>
 
   <section><div class="kicker">Residual geography</div><h2>Spatial autocorrelation was reduced, not removed</h2><div class="grid-2">
@@ -28,4 +28,3 @@
 
   <section><div class="callout"><strong>Reading the results:</strong> mean fold R² and pooled R² answer related but different questions. The headline comparisons use mean outer-fold R² consistently.</div></section>
 </main><footer><div class="footer-inner"><span>© 2026 Xinpeng Huang · UCL GEOG0105</span><span><a href="https://github.com/xinpeng00/london-geospatial-representations/tree/main/results/selected_tables">Download selected tables</a></span></div></footer></body></html>
-
