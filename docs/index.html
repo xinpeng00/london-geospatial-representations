@@ -37,7 +37,7 @@
 
     <section><div class="kicker">Primary PTAL benchmark</div><h2>Multimodal fusion produced the strongest held-out performance</h2>
       <div class="chart" role="img" aria-label="Mean borough-held-out R squared for selected PTAL models">
-        <div class="bar-row fusion" style="--value:.693"><div class="bar-label">Full representations</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.693</div></div>
+        <div class="bar-row fusion" style="--value:.693"><div class="bar-label">All representations + Street View metadata</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.693</div></div>
         <div class="bar-row fusion" style="--value:.673"><div class="bar-label">Street + aerial</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.673</div></div>
         <div class="bar-row" style="--value:.661"><div class="bar-label">Street + metadata</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.661</div></div>
         <div class="bar-row" style="--value:.615"><div class="bar-label">AlphaEarth</div><div class="bar-track"><div class="bar-fill"></div></div><div class="bar-value">.615</div></div>
@@ -52,7 +52,7 @@
       <div class="grid-3">
         <article class="card"><h3>Urban form was observable</h3><p>PTAL was strongly associated with information encoded in street scenes, aerial imagery and annual Earth-observation context.</p></article>
         <article class="card"><h3>Fusion was selective</h3><p>Street-level and aerial information were complementary for PTAL, while DINOv2 and SatCLIP showed little additional benefit when combined.</p></article>
-        <article class="card"><h3>Controls mattered for EPC</h3><p>Construction age and floor area dominated EPC prediction. Representation fusion added little once these extensive property controls were available.</p></article>
+        <article class="card"><h3>Controls mattered for EPC</h3><p>Construction-age information drove most of the compact-to-rich control improvement, while median floor area added very little. Representation fusion added little once the rich controls were available.</p></article>
       </div>
     </section>
   </main>
@@ -60,4 +60,3 @@
   <footer><div class="footer-inner"><span>© 2026 Xinpeng Huang · UCL GEOG0105</span><span><a href="https://github.com/xinpeng00/london-geospatial-representations">Source code</a></span></div></footer>
 </body>
 </html>
-
