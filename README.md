@@ -18,9 +18,9 @@ Five representation families are compared: DINOv2 aerial imagery (768D), Street 
 ## Main findings
 
 - For PTAL, the spatial-control baseline achieved mean held-out R² = **0.401**. The strongest individual representations were AlphaEarth (**0.615**), Street View CLIP (**0.613**), and DINOv2 (**0.595**).
-- Street View content plus availability metadata reached **0.661**; street-level and aerial fusion reached **0.673**; the full representation set reached **0.693**.
+- Street View content plus availability metadata reached **0.661**; street-level and aerial fusion reached **0.673**; all representations plus Street View availability metadata reached **0.693**.
 - PTAL performance declined under stricter continuous-region validation, while representation models retained more predictive value than spatial controls alone.
-- For EPC, extensive property controls were stronger than representation-only models. TESSERA provided a small positive increment beyond those controls, while broader fusion was largely redundant once construction age and floor area were included.
+- For EPC, rich property controls were stronger than representation-only models. TESSERA provided a small positive increment beyond those controls, while broader fusion was largely redundant once construction-age and floor-area information were included. The compact-to-rich control improvement was driven primarily by construction-age information, with median floor area adding very little.
 - Representation models reduced residual spatial autocorrelation but did not eliminate it.
 
 All values above are mean outer-fold R² from the frozen final analysis. The study evaluates transfer within London; it does not claim external-city generalisation.
@@ -75,4 +75,3 @@ Exact reproduction requires authorised access to the licensed/private source ass
 ## Citation
 
 See [`CITATION.cff`](CITATION.cff). Code is released under the MIT License; third-party data and pretrained models remain subject to their original terms, as described in [`NOTICE.md`](NOTICE.md).
-
